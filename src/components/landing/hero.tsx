@@ -1,40 +1,45 @@
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-gray-200">
-      <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-sm text-gray-600">
-            🚀 Built for solo founders &amp; indie hackers
-          </div>
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Ship your AI SaaS in days, not months
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            The Next.js boilerplate with{" "}
-            <span className="font-semibold text-gray-900">
-              usage-based Stripe billing
-            </span>{" "}
-            built-in. Auth, payments, Supabase, and UX components —
-            everything you need to launch your AI product, already integrated.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-4">
-            <a
-              href="/pricing"
-              className="inline-flex items-center justify-center rounded-lg bg-gray-900 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-gray-800"
-            >
-              Get Access — $99
-            </a>
-            <a
-              href="#features"
-              className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50"
-            >
-              See Features
-            </a>
-          </div>
-          <p className="mt-4 text-sm text-gray-500">
-            No subscription. Lifetime updates. Built with Next.js 15 + TypeScript.
-          </p>
+    <section className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
+      <div className="mx-auto max-w-3xl text-center">
+        {/* Badge */}
+        <div className="animate-fade-up mb-6 inline-flex items-center rounded-full border border-wope-border bg-wope-card-soft px-4 py-1.5 text-sm font-medium uppercase tracking-widest text-wope-text-soft backdrop-blur-sm">
+          Built for solo founders &amp; indie hackers
         </div>
+
+        {/* Gradient Headline */}
+        <h1 className="animate-fade-up animate-fade-up-delay-1 text-gradient text-5xl font-bold leading-[1.1] tracking-tight sm:text-7xl">
+          Ship your AI SaaS in days, not months
+        </h1>
+
+        <p className="animate-fade-up animate-fade-up-delay-2 mt-6 text-lg leading-8 text-wope-text-soft">
+          The Next.js boilerplate with{" "}
+          <span className="font-semibold text-white">
+            usage-based Stripe billing
+          </span>{" "}
+          built-in. Auth, payments, Supabase, and UX components &mdash;
+          everything you need to launch your AI product, already integrated.
+        </p>
+
+        {/* CTA Buttons */}
+        <div className="animate-fade-up animate-fade-up-delay-3 mt-10 flex items-center justify-center gap-4">
+          <a
+            href="/pricing"
+            className="btn-glow inline-flex h-12 items-center justify-center rounded-full bg-wope-accent px-8 text-base font-medium text-white transition-all duration-200 hover:bg-wope-accent-hover hover:scale-105"
+          >
+            Get Access — $99
+          </a>
+          <a
+            href="#features"
+            className="inline-flex h-12 items-center justify-center rounded-full border border-wope-border bg-wope-card/50 px-8 text-base font-medium text-wope-text-soft backdrop-blur-sm transition-all duration-200 hover:border-wope-text-muted hover:text-white"
+          >
+            See Features
+          </a>
+        </div>
+
+        <p className="animate-fade-up animate-fade-up-delay-4 mt-4 text-sm text-wope-text-muted">
+          No subscription. Lifetime updates. Built with Next.js 15 + TypeScript.
+        </p>
       </div>
     </section>
   )

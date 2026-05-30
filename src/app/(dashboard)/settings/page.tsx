@@ -10,56 +10,23 @@ export default function SettingsPage() {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    createClient()
-      .auth.getUser()
-      .then(({ data }) => {
-        setUser(data.user)
-        setLoading(false)
-      })
-  }, [])
+  useEffect(() => { createClient().auth.getUser().then(({ data }) => { setUser(data.user); setLoading(false) }) }, [])
 
   if (loading) return <FullPageSpinner />
 
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Settings</h1>
-        <p className="mt-1 text-sm text-gray-600">
-          Manage your account settings.
-        </p>
+        <h1 className="text-2xl font-bold text-white">Settings</h1>
+        <p className="mt-1 text-sm text-wope-text-soft">Manage your account settings.</p>
       </div>
-
       <Card>
-        <CardHeader>
-          <h2 className="text-base font-semibold text-gray-900">Profile</h2>
-        </CardHeader>
+        <CardHeader><h2 className="text-base font-semibold text-white">Profile</h2></CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div>
-              <label className="text-sm text-gray-600">Email</label>
-              <p className="mt-1 font-medium text-gray-900">
-                {user?.email ?? "—"}
-              </p>
-            </div>
-            <div>
-              <label className="text-sm text-gray-600">User ID</label>
-              <p className="mt-1 font-mono text-sm text-gray-500">
-                {user?.id ?? "—"}
-              </p>
-            </div>
-            <div>
-              <label className="text-sm text-gray-600">Signed up</label>
-              <p className="mt-1 font-medium text-gray-900">
-                {user?.created_at
-                  ? new Date(user.created_at).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })
-                  : "—"}
-              </p>
-            </div>
+            <div><label className="text-sm text-wope-text-soft">Email</label><p className="mt-1 font-medium text-white">{user?.email ?? "—"}</p></div>
+            <div><label className="text-sm text-wope-text-soft">User ID</label><p className="mt-1 font-mono text-sm text-wope-text-muted">{user?.id ?? "—"}</p></div>
+            <div><label className="text-sm text-wope-text-soft">Signed up</label><p className="mt-1 font-medium text-white">{user?.created_at ? new Date(user.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : "—"}</p></div>
           </div>
         </CardContent>
       </Card>
