@@ -25,7 +25,6 @@ export function PricingCard({ price, onSelect }: PricingCardProps) {
       return
     }
 
-    // Default: redirect to Stripe Checkout
     setLoading(true)
     try {
       const supabase = createClient()
@@ -67,26 +66,26 @@ export function PricingCard({ price, onSelect }: PricingCardProps) {
     <div
       className={`relative flex flex-col rounded-2xl border p-8 ${
         price.highlighted
-          ? "border-gray-900 bg-gray-50 shadow-lg"
-          : "border-gray-200 bg-white"
+          ? "border-ink bg-surface-soft shadow-[rgba(0,0,0,0.02)_0_0_0_1px,rgba(0,0,0,0.04)_0_2px_6px,rgba(0,0,0,0.1)_0_4px_8px]"
+          : "border-hairline bg-canvas"
       }`}
     >
       {price.highlighted && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gray-900 px-4 py-1 text-xs font-medium text-white">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-ink px-4 py-1 text-xs font-medium text-white">
           Most Popular
         </div>
       )}
 
       <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900">{price.name}</h3>
-        <p className="mt-2 text-sm text-gray-600">{price.description}</p>
+        <h3 className="text-base font-semibold text-ink">{price.name}</h3>
+        <p className="mt-2 text-sm text-muted">{price.description}</p>
       </div>
 
       <div className="mb-6">
-        <span className="text-4xl font-bold text-gray-900">
+        <span className="text-[28px] font-bold text-ink">
           ${(price.monthlyPrice / 100).toFixed(0)}
         </span>
-        <span className="ml-1 text-sm text-gray-500">/month</span>
+        <span className="ml-1 text-sm text-muted">/month</span>
       </div>
 
       <button
@@ -94,8 +93,8 @@ export function PricingCard({ price, onSelect }: PricingCardProps) {
         disabled={loading}
         className={`mb-8 flex w-full items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
           price.highlighted
-            ? "bg-gray-900 text-white hover:bg-gray-800"
-            : "border border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
+            ? "bg-rausch text-white hover:bg-rausch-active"
+            : "border border-hairline bg-canvas text-ink hover:bg-surface-soft"
         } disabled:opacity-50`}
       >
         {loading ? <Spinner /> : `Get ${price.name}`}
@@ -103,8 +102,8 @@ export function PricingCard({ price, onSelect }: PricingCardProps) {
 
       <ul className="flex flex-col gap-3">
         {price.features.map((feature) => (
-          <li key={feature} className="flex items-start gap-3 text-sm text-gray-600">
-            <Check className="mt-0.5 h-4 w-4 shrink-0 text-gray-900" />
+          <li key={feature} className="flex items-start gap-3 text-sm text-body">
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-rausch" />
             {feature}
           </li>
         ))}

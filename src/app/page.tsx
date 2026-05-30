@@ -6,26 +6,26 @@ import { CTA } from "@/components/landing/cta"
 export default function LandingPage() {
   return (
     <>
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/" className="text-lg font-bold text-gray-900">
+      <header className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
+        <a href="/" className="text-base font-semibold text-ink">
           AISaaS
         </a>
         <nav className="flex items-center gap-6">
           <a
             href="/pricing"
-            className="text-sm font-medium text-gray-600 hover:text-gray-900"
+            className="text-sm font-medium text-muted hover:text-ink"
           >
             Pricing
           </a>
           <a
             href="/auth/login"
-            className="text-sm font-medium text-gray-600 hover:text-gray-900"
+            className="text-sm font-medium text-muted hover:text-ink"
           >
             Sign In
           </a>
           <a
             href="/auth/register"
-            className="inline-flex items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-gray-800"
+            className="inline-flex h-12 items-center justify-center rounded-lg bg-rausch px-4 text-sm font-medium text-white transition-colors hover:bg-rausch-active"
           >
             Get Started
           </a>
@@ -37,9 +37,9 @@ export default function LandingPage() {
         <Features />
         <CTA />
       </main>
-      <footer className="border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+      <footer className="border-t border-hairline px-6 py-8 text-center text-sm text-muted">
         Built by{" "}
-        <a href="#" className="underline underline-offset-2 hover:text-gray-700">
+        <a href="#" className="underline underline-offset-2 hover:text-ink">
           Your Name
         </a>
         . Powered by Next.js + Supabase + Stripe.
