@@ -12,24 +12,23 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center font-medium transition-colors focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
-          "rounded-lg",
+          "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
           {
-            "bg-rausch text-white hover:bg-rausch-active active:bg-rausch-active":
+            "bg-black text-white hover:bg-gray-800 focus:ring-gray-500":
               variant === "primary",
-            "bg-surface-strong text-ink hover:bg-hairline":
+            "bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-400":
               variant === "secondary",
-            "border border-hairline bg-canvas text-ink hover:bg-surface-soft":
+            "border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-gray-400":
               variant === "outline",
-            "text-ink hover:bg-surface-soft":
+            "text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:ring-gray-400":
               variant === "ghost",
-            "bg-[#c13515] text-white hover:bg-[#b32505]":
+            "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500":
               variant === "danger",
           },
           {
-            "h-8 px-3 text-sm": size === "sm",
-            "h-12 px-6 text-base": size === "md",
-            "h-14 px-8 text-base": size === "lg",
+            "text-sm px-3 py-1.5": size === "sm",
+            "text-sm px-4 py-2": size === "md",
+            "text-base px-6 py-3": size === "lg",
           },
           className
         )}

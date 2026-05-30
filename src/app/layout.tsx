@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen bg-canvas text-ink antialiased")}>
+      <body className={cn("min-h-screen bg-white antialiased")}>
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -1,17 +1,17 @@
 export function Hero() {
   return (
-    <section className="border-b border-hairline">
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:py-24 lg:px-8">
+    <section className="relative overflow-hidden border-b border-gray-200">
+      <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-6 inline-flex items-center rounded-full border border-hairline bg-surface-soft px-4 py-1.5 text-sm text-muted">
-            Built for solo founders &amp; indie hackers
+          <div className="mb-6 inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-sm text-gray-600">
+            🚀 Built for solo founders &amp; indie hackers
           </div>
-          <h1 className="text-[28px] font-bold leading-[1.43] text-ink sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Ship your AI SaaS in days, not months
           </h1>
-          <p className="mt-6 text-base leading-6 text-body">
+          <p className="mt-6 text-lg leading-8 text-gray-600">
             The Next.js boilerplate with{" "}
-            <span className="font-semibold text-ink">
+            <span className="font-semibold text-gray-900">
               usage-based Stripe billing
             </span>{" "}
             built-in. Auth, payments, Supabase, and UX components —
@@ -20,18 +20,18 @@ export function Hero() {
           <div className="mt-10 flex items-center justify-center gap-4">
             <a
               href="/pricing"
-              className="inline-flex h-12 items-center justify-center rounded-lg bg-rausch px-6 text-base font-medium text-white transition-colors hover:bg-rausch-active"
+              className="inline-flex items-center justify-center rounded-lg bg-gray-900 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-gray-800"
             >
               Get Access — $99
             </a>
             <a
               href="#features"
-              className="inline-flex h-12 items-center justify-center rounded-lg border border-hairline bg-canvas px-6 text-base font-medium text-ink transition-colors hover:bg-surface-soft"
+              className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50"
             >
               See Features
             </a>
           </div>
-          <p className="mt-4 text-sm text-muted">
+          <p className="mt-4 text-sm text-gray-500">
             No subscription. Lifetime updates. Built with Next.js 15 + TypeScript.
           </p>
         </div>

@@ -24,33 +24,33 @@ export default function SettingsPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-[22px] font-medium leading-[1.18] text-ink">Settings</h1>
-        <p className="mt-1 text-sm text-muted">
+        <h1 className="text-2xl font-bold text-gray-900">Settings</h1>
+        <p className="mt-1 text-sm text-gray-600">
           Manage your account settings.
         </p>
       </div>
 
       <Card>
         <CardHeader>
-          <h2 className="text-base font-semibold text-ink">Profile</h2>
+          <h2 className="text-base font-semibold text-gray-900">Profile</h2>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div>
-              <label className="text-sm text-muted">Email</label>
-              <p className="mt-1 font-medium text-ink">
+              <label className="text-sm text-gray-600">Email</label>
+              <p className="mt-1 font-medium text-gray-900">
                 {user?.email ?? "—"}
               </p>
             </div>
             <div>
-              <label className="text-sm text-muted">User ID</label>
-              <p className="mt-1 font-mono text-sm text-muted-soft">
+              <label className="text-sm text-gray-600">User ID</label>
+              <p className="mt-1 font-mono text-sm text-gray-500">
                 {user?.id ?? "—"}
               </p>
             </div>
             <div>
-              <label className="text-sm text-muted">Signed up</label>
-              <p className="mt-1 font-medium text-ink">
+              <label className="text-sm text-gray-600">Signed up</label>
+              <p className="mt-1 font-medium text-gray-900">
                 {user?.created_at
                   ? new Date(user.created_at).toLocaleDateString("en-US", {
                       year: "numeric",
