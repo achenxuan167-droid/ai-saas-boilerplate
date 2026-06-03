@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0118"/>
+      <stop offset="100%" stop-color="#1a0530"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.04">
+    <line x1="128" y1="0" x2="128" y2="512" stroke="white"/>
+    <line x1="256" y1="0" x2="256" y2="512" stroke="white"/>
+    <line x1="384" y1="0" x2="384" y2="512" stroke="white"/>
+    <line x1="0" y1="128" x2="512" y2="128" stroke="white"/>
+    <line x1="0" y1="256" x2="512" y2="256" stroke="white"/>
+    <line x1="0" y1="384" x2="512" y2="384" stroke="white"/>
+  </g>
+
+  <!-- "AI" monogram -->
+  <text x="256" y="280" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="200" font-weight="800" fill="url(#grad)" filter="url(#glow)" letter-spacing="-8">AI</text>
+
+  <!-- Small "SaaS" badge -->
+  <text x="256" y="370" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="500" fill="#c084fc" letter-spacing="12" opacity="0.8">SAAS</text>
+
+  <!-- Corner accent -->
+  <rect x="360" y="36" width="4" height="48" rx="2" fill="#a855f7" opacity="0.4"/>
+  <rect x="360" y="36" width="48" height="4" rx="2" fill="#a855f7" opacity="0.4"/>
+</svg>

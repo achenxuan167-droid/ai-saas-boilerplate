@@ -272,7 +272,7 @@ export default function LandingPage() {
               <div className="mt-10 flex items-center justify-center gap-4">
                 {/* Spec 6: Shimmer button on CTA */}
                 <motion.a
-                  href="https://aisoon.lemonsqueezy.com/checkout"
+                  href="https://aisoon.lemonsqueezy.com/checkout/buy/f1327b39-580c-490d-8506-16267d9fbd79"
                   animate={{ boxShadow: breathingShadow }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   whileHover={{ scale: 1.04, boxShadow: "0 0 25px rgba(168, 85, 247, 0.8)" }}
