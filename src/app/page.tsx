@@ -272,7 +272,7 @@ export default function LandingPage() {
               <div className="mt-10 flex items-center justify-center gap-4">
                 {/* Spec 6: Shimmer button on CTA */}
                 <motion.a
-                  href="/pricing"
+                  href="https://aisoon.lemonsqueezy.com/checkout"
                   animate={{ boxShadow: breathingShadow }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   whileHover={{ scale: 1.04, boxShadow: "0 0 25px rgba(168, 85, 247, 0.8)" }}
@@ -329,7 +329,7 @@ export default function LandingPage() {
         <footer className="px-6 py-8 text-center text-sm text-white/30">
           Built by{" "}
           <a href="#" className="underline underline-offset-2 transition-colors hover:text-white/50">
-            Your Name
+            AISoon
           </a>
           . Powered by Next.js + Supabase + Stripe.
         </footer>
